@@ -1,3 +1,5 @@
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 export const metadata = {
   title: 'EGCC WorldWide Hub',
   description: 'Global Hub EGCC'
@@ -10,7 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
